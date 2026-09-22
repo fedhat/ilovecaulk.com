@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bigjosh.github.io/ilovecaulk.com/sitemap.xml

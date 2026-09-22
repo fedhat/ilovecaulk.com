@@ -1,0 +1,369 @@
+---
+title: Which Caulk Are You?
+description: A nine-question personality quiz that matches you with a caulk formulation, from dependable acrylic latex to waterproof silicone and clingy butyl rubber.
+section: play
+styles: ["play.css"]
+scripts: ["quiz.js"]
+---
+<header class="page-head page-head-compact tiled">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="{{root}}index.html">Home</a></li><li><a href="{{root}}play/index.html">Play</a></li><li>Which caulk are you?</li></ol></nav>
+    <div class="play-head">
+      <div>
+        <h1>Which caulk are you?</h1>
+        {{> bead-line}}
+        <p class="lede">Nine questions. Eight formulations. One deeply personal result about how flexible, paintable or clingy you really are.</p>
+      </div>
+      <p class="play-host"><img src="{{root}}assets/img/crew-karen.webp" width="54" height="54" alt=""><span><strong>Karen took it twice.</strong>Siliconized acrylic both times. She calls that consistency.</span></p>
+    </div>
+  </div>
+</header>
+{{joint}}
+
+<section class="section" aria-label="Quiz">
+  <div class="wrap">
+    <div class="quiz" data-quiz="personality">
+      <noscript><div class="warn"><strong>This quiz needs JavaScript.</strong><p>Turn it on to find your caulk. In the meantime, the <a href="{{root}}types-formulations/index.html">formulations guide</a> introduces all eight personalities.</p></div></noscript>
+      <div class="quiz-meter js-only">
+        <div class="quiz-progress" aria-hidden="true"><div class="quiz-progress-bead"></div></div>
+        <p class="quiz-count" aria-live="polite">Question 1 of 9</p>
+      </div>
+      <div class="quiz-q js-only">
+        <h2 class="quiz-q-text" tabindex="-1"><span class="quiz-q-num">1</span><span>It's Saturday morning. Where are you?</span></h2>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-w='{"polyurethane": 2}'>At the hardware store as the doors open, list in hand.</button>
+          <button type="button" class="quiz-option" data-w='{"acrylic-latex": 2, "siliconized-acrylic": 1}'>Touching up the paint on the baseboards. It was bugging you.</button>
+          <button type="button" class="quiz-option" data-w='{"silicone": 2}'>In a long, hot shower. Zero regrets.</button>
+          <button type="button" class="quiz-option" data-w='{"acoustic": 2}'>Headphones on, reading in blissful silence.</button>
+        </div>
+      </div>
+      <div class="quiz-q js-only" hidden>
+        <h2 class="quiz-q-text" tabindex="-1"><span class="quiz-q-num">2</span><span>How would your friends describe you?</span></h2>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-w='{"siliconized-acrylic": 2}'>Easygoing. I fit in just about anywhere.</button>
+          <button type="button" class="quiz-option" data-w='{"elastomeric": 2}'>Flexible. Extremely flexible.</button>
+          <button type="button" class="quiz-option" data-w='{"ms-polymer": 2}'>Good at everything, and a little expensive.</button>
+          <button type="button" class="quiz-option" data-w='{"butyl": 2}'>Clingy, but in a loyal way.</button>
+        </div>
+      </div>
+      <div class="quiz-q js-only" hidden>
+        <h2 class="quiz-q-text" tabindex="-1"><span class="quiz-q-num">3</span><span>Pick a vacation.</span></h2>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-w='{"silicone": 2}'>A beach. I'll be in the water all day.</button>
+          <button type="button" class="quiz-option" data-w='{"elastomeric": 1, "polyurethane": 1}'>A mountain cabin through a hard winter.</button>
+          <button type="button" class="quiz-option" data-w='{"butyl": 2}'>A cross-country road trip in an RV.</button>
+          <button type="button" class="quiz-option" data-w='{"acoustic": 2}'>A silent meditation retreat.</button>
+        </div>
+      </div>
+      <div class="quiz-q js-only" hidden>
+        <h2 class="quiz-q-text" tabindex="-1"><span class="quiz-q-num">4</span><span>Someone hands you a stressful deadline. You…</span></h2>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-w='{"elastomeric": 2}'>Stretch, adapt, and bounce right back.</button>
+          <button type="button" class="quiz-option" data-w='{"silicone": 2}'>Stay calm, even with water coming at you from every direction.</button>
+          <button type="button" class="quiz-option" data-w='{"polyurethane": 2}'>Get tough and take the time it needs to do it right.</button>
+          <button type="button" class="quiz-option" data-w='{"acoustic": 2}'>Quietly absorb it. Nobody hears a thing.</button>
+        </div>
+      </div>
+      <div class="quiz-q js-only" hidden>
+        <h2 class="quiz-q-text" tabindex="-1"><span class="quiz-q-num">5</span><span>What's your relationship with change?</span></h2>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-w='{"acrylic-latex": 2}'>I love a fresh coat of paint every few years.</button>
+          <button type="button" class="quiz-option" data-w='{"silicone": 2}'>I'm the same color forever. Take it or leave it.</button>
+          <button type="button" class="quiz-option" data-w='{"ms-polymer": 2}'>I adapt to whoever I'm with: wood people, metal people, glass people.</button>
+          <button type="button" class="quiz-option" data-w='{"siliconized-acrylic": 2}'>A little change is good, as long as I don't get soaked.</button>
+        </div>
+      </div>
+      <div class="quiz-q js-only" hidden>
+        <h2 class="quiz-q-text" tabindex="-1"><span class="quiz-q-num">6</span><span>Your dream weekend project?</span></h2>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-w='{"butyl": 2}'>Re-sealing the gutters and the roof flashing.</button>
+          <button type="button" class="quiz-option" data-w='{"polyurethane": 2}'>Fixing that cracked joint in the driveway.</button>
+          <button type="button" class="quiz-option" data-w='{"acoustic": 2}'>Building a home theater.</button>
+          <button type="button" class="quiz-option" data-w='{"siliconized-acrylic": 2}'>Tidying up the kitchen backsplash.</button>
+        </div>
+      </div>
+      <div class="quiz-q js-only" hidden>
+        <h2 class="quiz-q-text" tabindex="-1"><span class="quiz-q-num">7</span><span>Pick a superpower.</span></h2>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-w='{"acrylic-latex": 2}'>Disappearing completely under a coat of paint.</button>
+          <button type="button" class="quiz-option" data-w='{"ms-polymer": 2}'>Sticking to anything.</button>
+          <button type="button" class="quiz-option" data-w='{"silicone": 1, "butyl": 1}'>Being totally waterproof.</button>
+          <button type="button" class="quiz-option" data-w='{"elastomeric": 2}'>Stretching like a rubber band.</button>
+        </div>
+      </div>
+      <div class="quiz-q js-only" hidden>
+        <h2 class="quiz-q-text" tabindex="-1"><span class="quiz-q-num">8</span><span>Be honest: what's your flaw?</span></h2>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-w='{"acrylic-latex": 2}'>I shrink a little under pressure.</button>
+          <button type="button" class="quiz-option" data-w='{"butyl": 2}'>I can be messy, and I have a strong smell.</button>
+          <button type="button" class="quiz-option" data-w='{"polyurethane": 2}'>I need a lot of time and good ventilation.</button>
+          <button type="button" class="quiz-option" data-w='{"ms-polymer": 2}'>I'm a bit of a splurge.</button>
+        </div>
+      </div>
+      <div class="quiz-q js-only" hidden>
+        <h2 class="quiz-q-text" tabindex="-1"><span class="quiz-q-num">9</span><span>What's the nicest thing anyone's ever said about you?</span></h2>
+        <div class="quiz-options">
+          <button type="button" class="quiz-option" data-w='{"siliconized-acrylic": 2}'>“You're the perfect middle ground.”</button>
+          <button type="button" class="quiz-option" data-w='{"elastomeric": 2}'>“You really go with the flow.”</button>
+          <button type="button" class="quiz-option" data-w='{"acoustic": 1, "acrylic-latex": 1}'>“You never make a scene.”</button>
+          <button type="button" class="quiz-option" data-w='{"polyurethane": 1, "ms-polymer": 1}'>“You're rock solid when it counts.”</button>
+        </div>
+      </div>
+      <div class="quiz-nav js-only"><button type="button" class="btn-mini" data-quiz-back hidden>Back to the last question</button></div>
+
+      <div class="quiz-results">
+        <article class="quiz-result" data-type="acrylic-latex" tabindex="-1" hidden aria-labelledby="result-acrylic-latex">
+          <svg class="tube-art" viewBox="0 0 120 300" aria-hidden="true" focusable="false">
+            <path d="M53 6 L66 20 L64 78 L56 78 Z" fill="#f7f6f0" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M28 78 H92 L84 98 H36 Z" fill="#fff" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="18" y="96" width="84" height="186" rx="8" fill="#1f3c88" stroke="#14203a" stroke-width="3"/>
+            <rect x="18" y="146" width="84" height="74" fill="#fffefa" stroke="#14203a" stroke-width="3"/>
+            <text x="60" y="180" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="900" font-size="15" fill="#14203a">ACRYLIC</text>
+            <text x="60" y="203" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="700" font-size="9" fill="#46506a">10.1 FL OZ</text>
+            <rect x="18" y="270" width="84" height="16" rx="3" fill="#c9c6ba" stroke="#14203a" stroke-width="3"/>
+            <path d="M30 110 V262" stroke="#fff" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <p class="kicker">You are</p>
+            <h2 id="result-acrylic-latex">Acrylic Latex</h2>
+            <p class="quiz-result-tagline">The dependable friend who helps you paint.</p>
+            <p>You're everywhere, and people take you for granted. That's fine. You know the truth: half the interiors in America are held together by your quiet competence.</p>
+            <p>You clean up with water, you're ready for paint in no time, and you make everyone's trim look sharp. You're not a fan of the rain, and you'll admit you shrink a little under pressure. Nobody's perfect.</p>
+            <h3>Where you shine in real life</h3>
+            <ul><li>Baseboards, crown molding and interior window trim</li><li>Gaps between drywall and door or window casings</li><li>Any interior joint you plan to paint</li><li>Dry rooms: bedrooms, living rooms, hallways</li></ul>
+            <p><a href="{{root}}caulk-by-type/index.html#acrylic-latex">Read up on acrylic latex</a></p>
+            <div class="btn-row">
+              <button type="button" class="btn" data-copy>Copy my result</button>
+              <button type="button" class="btn-plain" data-restart>Take it again</button>
+            </div>
+            <p class="quiz-copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="quiz-result" data-type="siliconized-acrylic" tabindex="-1" hidden aria-labelledby="result-siliconized-acrylic">
+          <svg class="tube-art" viewBox="0 0 120 300" aria-hidden="true" focusable="false">
+            <path d="M53 6 L66 20 L64 78 L56 78 Z" fill="#f7f6f0" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M28 78 H92 L84 98 H36 Z" fill="#fff" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="18" y="96" width="84" height="186" rx="8" fill="#3b8a73" stroke="#14203a" stroke-width="3"/>
+            <rect x="18" y="146" width="84" height="74" fill="#fffefa" stroke="#14203a" stroke-width="3"/>
+            <text x="60" y="180" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="900" font-size="13" fill="#14203a">ACRYLIC+</text>
+            <text x="60" y="203" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="700" font-size="9" fill="#46506a">10.1 FL OZ</text>
+            <rect x="18" y="270" width="84" height="16" rx="3" fill="#c9c6ba" stroke="#14203a" stroke-width="3"/>
+            <path d="M30 110 V262" stroke="#fff" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <p class="kicker">You are</p>
+            <h2 id="result-siliconized-acrylic">Siliconized Acrylic</h2>
+            <p class="quiz-result-tagline">The diplomat.</p>
+            <p>You're the middle ground, and proud of it. A little silicone in your blood makes you more flexible and more water-tolerant than your plain-latex cousin, but you'll still take paint and clean up with water.</p>
+            <p>You're who people call when they want “good enough for the kitchen” without committing to forever. Just don't volunteer for the steam shower.</p>
+            <h3>Where you shine in real life</h3>
+            <ul><li>Kitchen and bath trim that sees the occasional splash</li><li>Interior window frames and sills</li><li>Sink and counter edges you want to paint</li><li>General-purpose interior sealing</li></ul>
+            <p><a href="{{root}}caulk-by-type/index.html#siliconized-acrylic">Read up on siliconized acrylic</a></p>
+            <div class="btn-row">
+              <button type="button" class="btn" data-copy>Copy my result</button>
+              <button type="button" class="btn-plain" data-restart>Take it again</button>
+            </div>
+            <p class="quiz-copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="quiz-result" data-type="silicone" tabindex="-1" hidden aria-labelledby="result-silicone">
+          <svg class="tube-art" viewBox="0 0 120 300" aria-hidden="true" focusable="false">
+            <path d="M53 6 L66 20 L64 78 L56 78 Z" fill="#f7f6f0" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M28 78 H92 L84 98 H36 Z" fill="#fff" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="18" y="96" width="84" height="186" rx="8" fill="#d7263d" stroke="#14203a" stroke-width="3"/>
+            <rect x="18" y="146" width="84" height="74" fill="#fffefa" stroke="#14203a" stroke-width="3"/>
+            <text x="60" y="180" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="900" font-size="13" fill="#14203a">SILICONE</text>
+            <text x="60" y="203" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="700" font-size="9" fill="#46506a">10.1 FL OZ</text>
+            <rect x="18" y="270" width="84" height="16" rx="3" fill="#c9c6ba" stroke="#14203a" stroke-width="3"/>
+            <path d="M30 110 V262" stroke="#fff" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <p class="kicker">You are</p>
+            <h2 id="result-silicone">100% Silicone</h2>
+            <p class="quiz-result-tagline">The one with the cape.</p>
+            <p>Water doesn't scare you. Steam doesn't scare you. You're flexible, you bond like a champion to glass, tile and metal, and you'll stay exactly who you are for years.</p>
+            <p>Nobody is painting over you, and honestly, they shouldn't try. You can be a little hard to work with when rushed, but in a crisis, you're the first one people call.</p>
+            <h3>Where you shine in real life</h3>
+            <ul><li>Tubs, showers and shower doors</li><li>Sinks, faucets and countertops</li><li>Glass, metal and glazed tile</li><li>Wet zones and exterior joints that won't be painted</li></ul>
+            <p><a href="{{root}}caulk-by-type/index.html#silicone">Read up on 100% silicone</a></p>
+            <div class="btn-row">
+              <button type="button" class="btn" data-copy>Copy my result</button>
+              <button type="button" class="btn-plain" data-restart>Take it again</button>
+            </div>
+            <p class="quiz-copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="quiz-result" data-type="polyurethane" tabindex="-1" hidden aria-labelledby="result-polyurethane">
+          <svg class="tube-art" viewBox="0 0 120 300" aria-hidden="true" focusable="false">
+            <path d="M53 6 L66 20 L64 78 L56 78 Z" fill="#f7f6f0" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M28 78 H92 L84 98 H36 Z" fill="#fff" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="18" y="96" width="84" height="186" rx="8" fill="#14203a" stroke="#14203a" stroke-width="3"/>
+            <rect x="18" y="146" width="84" height="74" fill="#fffefa" stroke="#14203a" stroke-width="3"/>
+            <text x="60" y="180" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="900" font-size="15" fill="#14203a">POLY-U</text>
+            <text x="60" y="203" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="700" font-size="9" fill="#46506a">10.1 FL OZ</text>
+            <rect x="18" y="270" width="84" height="16" rx="3" fill="#c9c6ba" stroke="#14203a" stroke-width="3"/>
+            <path d="M30 110 V262" stroke="#fff" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <p class="kicker">You are</p>
+            <h2 id="result-polyurethane">Polyurethane</h2>
+            <p class="quiz-result-tagline">The tough one.</p>
+            <p>You're built for the hard jobs: concrete, masonry, siding, driveways. You grip like you mean it, you shrug off sun and weather, and you'll even take paint.</p>
+            <p>You need your space, a little extra time, and good airflow, and you don't apologize for it. When you commit, you commit for years.</p>
+            <h3>Where you shine in real life</h3>
+            <ul><li>Concrete expansion joints and driveway cracks</li><li>Masonry, brick and stone</li><li>Exterior wood and siding joints</li><li>Garage floors (the self-leveling kind)</li></ul>
+            <p><a href="{{root}}caulk-by-type/index.html#polyurethane">Read up on polyurethane</a></p>
+            <div class="btn-row">
+              <button type="button" class="btn" data-copy>Copy my result</button>
+              <button type="button" class="btn-plain" data-restart>Take it again</button>
+            </div>
+            <p class="quiz-copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="quiz-result" data-type="butyl" tabindex="-1" hidden aria-labelledby="result-butyl">
+          <svg class="tube-art" viewBox="0 0 120 300" aria-hidden="true" focusable="false">
+            <path d="M53 6 L66 20 L64 78 L56 78 Z" fill="#f7f6f0" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M28 78 H92 L84 98 H36 Z" fill="#fff" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="18" y="96" width="84" height="186" rx="8" fill="#46506a" stroke="#14203a" stroke-width="3"/>
+            <rect x="18" y="146" width="84" height="74" fill="#fffefa" stroke="#14203a" stroke-width="3"/>
+            <text x="60" y="180" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="900" font-size="15" fill="#14203a">BUTYL</text>
+            <text x="60" y="203" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="700" font-size="9" fill="#46506a">10.1 FL OZ</text>
+            <rect x="18" y="270" width="84" height="16" rx="3" fill="#c9c6ba" stroke="#14203a" stroke-width="3"/>
+            <path d="M30 110 V262" stroke="#fff" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <p class="kicker">You are</p>
+            <h2 id="result-butyl">Butyl Rubber</h2>
+            <p class="quiz-result-tagline">The loyal clinger.</p>
+            <p>Glamour isn't your thing. Sticking around is. You bond to metal, masonry and wood, you laugh at bad weather, and you've been quietly holding roofs and RVs together for decades.</p>
+            <p>You're a bit messy, you take forever to settle down, and your smell enters the room before you do. The people who need you really, really need you.</p>
+            <h3>Where you shine in real life</h3>
+            <ul><li>Gutter seams and end caps</li><li>Flashing and roof penetrations</li><li>RVs, trailers and campers</li><li>Metal-to-metal joints outdoors</li></ul>
+            <p><a href="{{root}}caulk-by-type/index.html#butyl">Read up on butyl rubber</a></p>
+            <div class="btn-row">
+              <button type="button" class="btn" data-copy>Copy my result</button>
+              <button type="button" class="btn-plain" data-restart>Take it again</button>
+            </div>
+            <p class="quiz-copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="quiz-result" data-type="elastomeric" tabindex="-1" hidden aria-labelledby="result-elastomeric">
+          <svg class="tube-art" viewBox="0 0 120 300" aria-hidden="true" focusable="false">
+            <path d="M53 6 L66 20 L64 78 L56 78 Z" fill="#f7f6f0" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M28 78 H92 L84 98 H36 Z" fill="#fff" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="18" y="96" width="84" height="186" rx="8" fill="#f5b82e" stroke="#14203a" stroke-width="3"/>
+            <rect x="18" y="146" width="84" height="74" fill="#fffefa" stroke="#14203a" stroke-width="3"/>
+            <text x="60" y="180" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="900" font-size="15" fill="#14203a">STRETCH</text>
+            <text x="60" y="203" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="700" font-size="9" fill="#46506a">10.1 FL OZ</text>
+            <rect x="18" y="270" width="84" height="16" rx="3" fill="#c9c6ba" stroke="#14203a" stroke-width="3"/>
+            <path d="M30 110 V262" stroke="#fff" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <p class="kicker">You are</p>
+            <h2 id="result-elastomeric">Elastomeric Latex</h2>
+            <p class="quiz-result-tagline">The bendy one.</p>
+            <p>You go with the flow. Summer, winter, expansion, contraction: you stretch, you recover, and you stay bonded while everything around you shifts.</p>
+            <p>You're easy to get along with, you take paint, and you forgive a lot. Just don't ask you to sit underwater all day.</p>
+            <h3>Where you shine in real life</h3>
+            <ul><li>Exterior siding and trim</li><li>Stucco and masonry cracks that move</li><li>High-movement exterior joints</li><li>Anywhere outdoors you want flexible and paintable</li></ul>
+            <p><a href="{{root}}caulk-by-type/index.html#elastomeric">Read up on elastomeric latex</a></p>
+            <div class="btn-row">
+              <button type="button" class="btn" data-copy>Copy my result</button>
+              <button type="button" class="btn-plain" data-restart>Take it again</button>
+            </div>
+            <p class="quiz-copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="quiz-result" data-type="acoustic" tabindex="-1" hidden aria-labelledby="result-acoustic">
+          <svg class="tube-art" viewBox="0 0 120 300" aria-hidden="true" focusable="false">
+            <path d="M53 6 L66 20 L64 78 L56 78 Z" fill="#f7f6f0" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M28 78 H92 L84 98 H36 Z" fill="#fff" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="18" y="96" width="84" height="186" rx="8" fill="#6f82b4" stroke="#14203a" stroke-width="3"/>
+            <rect x="18" y="146" width="84" height="74" fill="#fffefa" stroke="#14203a" stroke-width="3"/>
+            <text x="60" y="180" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="900" font-size="15" fill="#14203a">HUSH</text>
+            <text x="60" y="203" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="700" font-size="9" fill="#46506a">10.1 FL OZ</text>
+            <rect x="18" y="270" width="84" height="16" rx="3" fill="#c9c6ba" stroke="#14203a" stroke-width="3"/>
+            <path d="M30 110 V262" stroke="#fff" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <p class="kicker">You are</p>
+            <h2 id="result-acoustic">Acoustic Sealant</h2>
+            <p class="quiz-result-tagline">The quiet one.</p>
+            <p>You never fully harden, and that's your superpower. You stay soft, you fill the gaps other people don't notice, and the result is peace and quiet.</p>
+            <p>You're not a fan of water and you prefer to work behind the scenes, inside the walls, where nobody sees you. The people who live with you just notice they're sleeping better.</p>
+            <h3>Where you shine in real life</h3>
+            <ul><li>Gaps around electrical boxes in sound-rated walls</li><li>Top and bottom plates in soundproofed walls</li><li>Home theaters, studios and nurseries</li><li>Drywall perimeter seams in quiet rooms</li></ul>
+            <p><a href="{{root}}caulk-by-type/index.html#acoustic">Read up on acoustic sealant</a></p>
+            <div class="btn-row">
+              <button type="button" class="btn" data-copy>Copy my result</button>
+              <button type="button" class="btn-plain" data-restart>Take it again</button>
+            </div>
+            <p class="quiz-copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+        <article class="quiz-result" data-type="ms-polymer" tabindex="-1" hidden aria-labelledby="result-ms-polymer">
+          <svg class="tube-art" viewBox="0 0 120 300" aria-hidden="true" focusable="false">
+            <path d="M53 6 L66 20 L64 78 L56 78 Z" fill="#f7f6f0" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M28 78 H92 L84 98 H36 Z" fill="#fff" stroke="#14203a" stroke-width="3" stroke-linejoin="round"/>
+            <rect x="18" y="96" width="84" height="186" rx="8" fill="#a81a2e" stroke="#14203a" stroke-width="3"/>
+            <rect x="18" y="146" width="84" height="74" fill="#fffefa" stroke="#14203a" stroke-width="3"/>
+            <text x="60" y="180" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="900" font-size="15" fill="#14203a">HYBRID</text>
+            <text x="60" y="203" text-anchor="middle" font-family="Libre Franklin, Arial, sans-serif" font-weight="700" font-size="9" fill="#46506a">10.1 FL OZ</text>
+            <rect x="18" y="270" width="84" height="16" rx="3" fill="#c9c6ba" stroke="#14203a" stroke-width="3"/>
+            <path d="M30 110 V262" stroke="#fff" stroke-opacity=".35" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <p class="kicker">You are</p>
+            <h2 id="result-ms-polymer">MS Polymer</h2>
+            <p class="quiz-result-tagline">The overachiever.</p>
+            <p>Paintable like latex, waterproof like silicone, and you stick to basically everything: wood, metal, concrete, plastic, glass. You're who the pros call when a job can't fail.</p>
+            <p>You skip the isocyanates polyurethane carries around, too. Yes, you cost more. Excellence usually does.</p>
+            <h3>Where you shine in real life</h3>
+            <ul><li>Joints between different materials</li><li>High-end exterior projects</li><li>Windows, doors and siding you'll paint</li><li>One tube for (nearly) everything outside</li></ul>
+            <p><a href="{{root}}caulk-by-type/index.html#ms-polymer">Read up on MS polymer</a></p>
+            <div class="btn-row">
+              <button type="button" class="btn" data-copy>Copy my result</button>
+              <button type="button" class="btn-plain" data-restart>Take it again</button>
+            </div>
+            <p class="quiz-copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="wrap wrap-narrow">
+    <div class="note"><strong>The fine print</strong><p>This quiz is for fun. The “where you shine” lists are real, though, so if your result matches the job in front of you, you're in luck. When the job matters, the <a href="{{root}}caulk-finder/index.html">Caulk Finder</a> and the label on the tube get the final say.</p></div>
+  </div>
+</section>
+
+{{ad}}
+
+<section class="section" aria-labelledby="more-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="more-h">More ways to play</h2><p>You've found your caulk. Now prove you can use it.</p></div>
+    <div class="grid grid-3 game-cards">
+      <a class="card card-link" href="{{root}}play/bead-master/index.html">
+        <span class="tag tag-red">Game</span>
+        <h3>Bead Master</h3>
+        <p>Lay a smooth, steady bead along the seam without blobs or gaps. Harder than it looks.</p>
+        <span class="more">Play Bead Master</span>
+      </a>
+      <a class="card card-link" href="{{root}}play/crossword/index.html">
+        <span class="tag tag-sun">Puzzle</span>
+        <h3>The caulk crossword</h3>
+        <p>Two grids, Apprentice and Master, packed with sealant vocabulary and a few shameless puns.</p>
+        <span class="more">Solve the crossword</span>
+      </a>
+      <a class="card card-link" href="{{root}}play/caulk-iq/index.html">
+        <span class="tag tag-denim">Trivia</span>
+        <h3>Caulk IQ</h3>
+        <p>Fifteen questions on technique, chemistry and a surprising amount of maritime history.</p>
+        <span class="more">Test your Caulk IQ</span>
+      </a>
+    </div>
+    <p style="margin-top:24px"><a href="{{root}}play/index.html">See everything in Play</a></p>
+  </div>
+</section>

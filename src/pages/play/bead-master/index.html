@@ -1,0 +1,150 @@
+---
+title: Bead Master: the caulking game
+description: Lay a clean, even bead of caulk on five real-world jobs, from a baseboard to a windy gutter seam. Watch your pressure, mind the corners, tool the bead, and earn your title.
+section: play
+styles: ["bead-master.css"]
+scripts: ["bead-master.js"]
+---
+<header class="page-head tiled bm-page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="{{root}}index.html">Home</a></li><li><a href="{{root}}play/index.html">Play</a></li><li>Bead Master</li></ol></nav>
+    <p class="kicker">A caulking game</p>
+    <h1>Bead Master</h1>
+    {{> bead-line}}
+    <p class="lede">Five jobs, one tube each. Squeeze, steer, and lay a bead that seals the gap without blobs, skips or strays. Then tool it smooth and see what the crew thinks.</p>
+  </div>
+</header>
+{{joint}}
+
+<section class="section bm-section" aria-labelledby="bm-title">
+  <div class="wrap">
+    <h2 id="bm-title" class="visually-hidden">Play Bead Master</h2>
+    <div class="bm" id="bead-master" data-root="{{root}}">
+      <div class="bm-hud" aria-label="Job status">
+        <p class="bm-job" id="bm-job">Job 1 of 5: Baseboard</p>
+        <dl class="bm-stats">
+          <div class="bm-stat"><dt>Time</dt><dd id="bm-time">0.0 s</dd></div>
+          <div class="bm-stat bm-stat-meter"><dt>Pressure</dt><dd><span class="bm-bar" aria-hidden="true"><span class="bm-bar-fill" id="bm-pressure"></span></span></dd></div>
+          <div class="bm-stat bm-stat-gauge"><dt>Bead</dt><dd><span class="bm-gauge" aria-hidden="true"><span class="bm-gauge-zone"></span><span class="bm-gauge-needle" id="bm-bead-needle"></span></span> <span class="bm-gauge-text" id="bm-bead-text">Waiting</span></dd></div>
+          <div class="bm-stat bm-stat-meter"><dt>Tube</dt><dd><span class="bm-bar bm-bar-tube" aria-hidden="true"><span class="bm-bar-fill" id="bm-tube"></span></span></dd></div>
+          <div class="bm-stat"><dt>Sealed</dt><dd id="bm-sealed">0%</dd></div>
+          <div class="bm-stat" id="bm-speed-wrap" hidden><dt>Hand speed</dt><dd id="bm-speed">0 of 6</dd></div>
+        </dl>
+      </div>
+
+      <div class="bm-stage" id="bm-stage">
+        <canvas id="bm-canvas" tabindex="0" role="application" aria-roledescription="caulking game" aria-label="Bead Master job site. Hold the mouse button, touch, or hold Space to squeeze the caulk gun." aria-describedby="bm-help"></canvas>
+        <p class="bm-banner" id="bm-banner" hidden></p>
+        <div class="bm-overlay" id="bm-overlay" hidden></div>
+      </div>
+
+      <div class="bm-controls" role="group" aria-label="Game controls">
+        <button type="button" class="btn btn-small" id="bm-done" disabled>Done caulking</button>
+        <button type="button" class="btn-plain" id="bm-release" disabled title="Keyboard: R">Pop the release</button>
+        <button type="button" class="btn-plain" id="bm-pause" disabled title="Keyboard: Esc">Pause</button>
+        <button type="button" class="btn-plain" id="bm-restart" disabled>Restart job</button>
+        <button type="button" class="btn-plain" id="bm-jobs">Job board</button>
+        <label class="bm-toggle"><input type="checkbox" id="bm-steady"> <span>Steady-hand mode (keyboard)</span></label>
+      </div>
+      <p class="bm-help" id="bm-help">Mouse or touch: hold to squeeze and steer the nozzle along the seam. Keyboard: click the job site or tab to it, turn on steady-hand mode, hold <kbd>Space</kbd> to squeeze and use the arrow keys to set your hand speed. <kbd>R</kbd> pops the pressure release, <kbd>Enter</kbd> finishes a step, <kbd>Esc</kbd> pauses.</p>
+      <p class="visually-hidden" id="bm-live" aria-live="polite"></p>
+      <noscript><p class="warn"><strong>Bead Master needs JavaScript.</strong> Turn it on to play, or read <a href="{{root}}the-bead/how-to-caulk/index.html">how to lay a perfect bead</a> instead.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight bm-learn" aria-labelledby="how-to-play">
+  <div class="wrap">
+    <div class="grid grid-2">
+      <div>
+        <h2 id="how-to-play">How to play</h2>
+        <ol class="steps">
+          <li><h3>Pick a job</h3><p>Start at the baseboard and work your way up to the gutter. Each job gets one tube, so wasted caulk can leave you short.</p></li>
+          <li><h3>Squeeze and steer</h3><p>Hold the mouse button (or your finger, or <kbd>Space</kbd>) to squeeze. The gun takes a beat to build pressure, so start moving as soon as caulk appears. Move too slowly and you'll lay a blobby bead. Move too fast and it thins out and skips.</p></li>
+          <li><h3>Stop the ooze</h3><p>Letting go of the trigger doesn't stop the flow right away. Ease off a moment before the end of the seam and keep moving, or hit <kbd>R</kbd> to pop the pressure release. On touch screens, lifting your finger pops the release for you.</p></li>
+          <li><h3>Tool the bead</h3><p>After you press <strong>Done caulking</strong>, drag along the bead (or hold <kbd>Space</kbd>) to smooth it. Tooling evens out lumps, pushes caulk into the joint and wipes up strays, and it earns a bonus.</p></li>
+          <li><h3>Read the scorecard</h3><p>You're graded on coverage, consistency, neatness and time, with a bonus for tooling. The crew adds one lesson to take to a real joint.</p></li>
+        </ol>
+      </div>
+      <div>
+        <h2>Controls</h2>
+        <div class="table-scroll">
+          <table class="spec-table bm-keys">
+            <caption class="visually-hidden">Bead Master controls</caption>
+            <thead><tr><th scope="col">Do this</th><th scope="col">Mouse or touch</th><th scope="col">Keyboard</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Squeeze the trigger</th><td>Hold the button or your finger down</td><td>Hold <kbd>Space</kbd></td></tr>
+              <tr><th scope="row">Steer the nozzle</th><td>Move the pointer. On touch screens, the nozzle rides just above your finger so you can see it.</td><td>Steady-hand mode follows the seam for you</td></tr>
+              <tr><th scope="row">Set hand speed</th><td>How fast you move</td><td><kbd>&rarr;</kbd> or <kbd>&uarr;</kbd> faster, <kbd>&larr;</kbd> or <kbd>&darr;</kbd> slower</td></tr>
+              <tr><th scope="row">Pop the release</th><td>The <strong>Pop the release</strong> button</td><td><kbd>R</kbd></td></tr>
+              <tr><th scope="row">Finish a step</th><td><strong>Done caulking</strong>, then <strong>Done tooling</strong></td><td><kbd>Enter</kbd></td></tr>
+              <tr><th scope="row">Tool the bead</th><td>Drag along the bead</td><td>Hold <kbd>Space</kbd></td></tr>
+              <tr><th scope="row">Pause</th><td>The <strong>Pause</strong> button</td><td><kbd>Esc</kbd></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <aside class="crew-tip">
+          <img src="{{root}}assets/img/crew-troy.webp" width="64" height="64" alt="">
+          <div><span class="who">Troy's tip</span><p>The gutter job is windy. Watch the nozzle tip, not the bead behind it, and correct early.</p></div>
+        </aside>
+      </div>
+    </div>
+
+    <h2 class="bm-teach-title">What the game teaches you</h2>
+    <div class="grid grid-3 bm-teach">
+      <div class="card">
+        <h3>Speed sets the bead</h3>
+        <p>With steady pressure, your hand speed decides the bead size. A real bead should just bridge the gap with a slight crown. Pick one pace and hold it.</p>
+      </div>
+      <div class="card">
+        <h3>Corners thin out</h3>
+        <p>Hands speed up through turns without meaning to. Slow down at corners and keep squeezing. That's where most real leaks start.</p>
+      </div>
+      <div class="card">
+        <h3>Guns keep oozing</h3>
+        <p>A classic ratchet gun keeps pushing after you let go. Release a beat early, or use the thumb release. A dripless gun helps a lot.</p>
+      </div>
+      <div class="card">
+        <h3>Tooling makes the seal</h3>
+        <p>Running a wet finger or tooling spatula along the bead presses caulk into both sides of the joint and levels the lumps. It isn't just for looks.</p>
+      </div>
+      <div class="card">
+        <h3>Waste costs you</h3>
+        <p>Caulk that misses the joint does nothing but make cleanup harder. Keep the tip riding in the seam, held at about 45 degrees.</p>
+      </div>
+      <div class="card">
+        <h3>The right caulk still matters</h3>
+        <p>A perfect bead of the wrong formulation still fails. Silicone goes in the tub, paintable acrylic on the baseboard, and something tough goes on the gutter.</p>
+      </div>
+    </div>
+    <p class="bm-read-more">Take it off the screen: read <a href="{{root}}the-bead/how-to-caulk/index.html">how to lay a perfect bead</a> for real, or check <a href="{{root}}caulk-by-type/index.html">caulk by type</a> to match the tube to the job.</p>
+  </div>
+</section>
+
+{{ad}}
+
+<section class="section bm-more" aria-labelledby="more-games">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="more-games">More ways to play</h2>
+      <p>Hands tired? Rest them on a puzzle.</p>
+    </div>
+    <div class="grid grid-3">
+      <a class="card card-link" href="{{root}}play/crossword/index.html">
+        <h3>The caulk crossword</h3>
+        <p>Backer rod, bead, cure time: test your vocabulary one clue at a time.</p>
+        <span class="more">Solve the crossword</span>
+      </a>
+      <a class="card card-link" href="{{root}}play/which-caulk-are-you/index.html">
+        <h3>Which caulk are you?</h3>
+        <p>Flexible? Waterproof? Paintable? A personality quiz with an unusually specific result.</p>
+        <span class="more">Take the quiz</span>
+      </a>
+      <a class="card card-link" href="{{root}}play/caulk-iq/index.html">
+        <h3>Caulk IQ</h3>
+        <p>Trivia for people who read the back of the tube. Every answer comes with the why.</p>
+        <span class="more">Test your Caulk IQ</span>
+      </a>
+    </div>
+  </div>
+</section>

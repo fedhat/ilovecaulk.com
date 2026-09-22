@@ -1,0 +1,90 @@
+/* Reviews, FAQ & Glossary: reference-page components layered on site.css */
+
+/* Author display rules (grid/flex) would otherwise beat the hidden attribute. */
+[hidden] { display: none !important; }
+
+/* ---------- Reviews ---------- */
+.how-we-review { max-width: 880px; margin-top: 0; }
+.picks-section { margin-top: clamp(36px, 5vw, 56px); }
+.pick { flex-direction: row; align-items: center; gap: 18px; }
+.pick .seal { width: 76px; height: 76px; }
+.pick-job { font-weight: 800; color: var(--rosie-dark); font-size: 0.9rem; margin: 0 0 2px !important; }
+.pick h3 { margin: 0 0 2px; }
+
+.filter-bar {
+  display: grid; gap: 10px; margin-bottom: clamp(28px, 4vw, 44px);
+  padding: 18px 20px; background: #fff; border: 2px solid var(--grout); border-radius: var(--radius-m);
+}
+.filter-label { font-weight: 800; margin: 0; }
+.filter-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.filter-chips .btn-plain { padding: 7px 14px; font-size: 0.95rem; border-color: var(--grout-dark); }
+.filter-chips .btn-plain:hover { border-color: var(--ink); }
+.filter-chips .btn-plain[aria-pressed="true"] { border-color: var(--ink); }
+.filter-count { margin: 0; font-size: var(--step--1); color: var(--ink-soft); }
+.filter-empty { font-weight: 700; padding: 20px; background: var(--sun-soft); border-radius: var(--radius-m); }
+
+.review-group + .review-group { margin-top: clamp(40px, 6vw, 64px); }
+.review-list { display: grid; gap: 22px; }
+.review {
+  background: #fff; border: 2px solid var(--grout); border-radius: var(--radius-m);
+  padding: clamp(18px, 3vw, 28px); display: grid; gap: 16px; scroll-margin-top: 96px;
+}
+.review:target { border-color: var(--ink); box-shadow: 6px 6px 0 var(--sun); }
+.review-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 10px 20px; }
+.review-type { margin: 0; font-weight: 750; font-size: 0.9rem; }
+.review-type a { color: var(--tile-deep); text-decoration-color: rgba(59, 138, 115, 0.45); }
+.review h3 { margin: 2px 0 2px; font-size: var(--step-2); }
+.review-sub { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+.review-score { margin: 4px 0 0; font-size: 1.15rem; }
+.verdict { margin: 0; font-size: 1.12rem; font-weight: 650; line-height: 1.45; border-left: 5px solid var(--sun); padding-left: 14px; max-width: 70ch; }
+.review-specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px 24px; margin: 0; }
+.review-specs > div { border-top: 1px solid var(--grout); padding-top: 8px; }
+.review-specs .span-2 { grid-column: 1 / -1; }
+.review-specs dt { font-weight: 800; font-size: 0.82rem; color: var(--ink-soft); }
+.review-specs dd { margin: 2px 0 0; font-size: 0.98rem; }
+.review-consensus { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 14px; }
+.review-consensus > div { border-radius: var(--radius-s); padding: 14px 18px; }
+.review-consensus .love { background: var(--tile-soft); }
+.review-consensus .gripes { background: #fbeee0; }
+.review-consensus h4 { font-size: 1rem; margin: 0 0 6px; }
+.review-consensus ul { margin: 0; padding-left: 1.1em; }
+.review-consensus li { margin: 3px 0; font-size: 0.97rem; }
+.review-links { margin: 0; font-size: 0.95rem; color: var(--ink-soft); }
+.compare-table td, .compare-table th { white-space: normal; }
+.compare-table tbody th a { color: var(--ink); }
+.after-compare { margin-top: clamp(28px, 4vw, 44px); }
+
+/* ---------- FAQ ---------- */
+.faq-search { max-width: 560px; margin-top: 8px; }
+.faq-search .input { font-size: 1.05rem; }
+.faq-group + .faq-group { margin-top: clamp(36px, 5vw, 56px); }
+.faq-group h2 { font-size: var(--step-3); scroll-margin-top: 96px; }
+.faq-group details { scroll-margin-top: 96px; }
+.faq-jump ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.faq-jump a { text-decoration: none; color: var(--ink); font-weight: 650; }
+.faq-jump a:hover { color: var(--rosie-dark); text-decoration: underline; }
+.faq-empty { font-weight: 700; padding: 20px; background: var(--sun-soft); border-radius: var(--radius-m); }
+
+/* ---------- Glossary ---------- */
+.letter-bar { display: flex; flex-wrap: wrap; gap: 4px; margin: 0 0 24px; padding: 0; list-style: none; }
+.letter-bar a, .letter-bar span {
+  display: grid; place-items: center; width: 38px; height: 38px; border-radius: 8px;
+  font-weight: 800; text-decoration: none;
+}
+.letter-bar a { background: #fff; border: 2px solid var(--grout-dark); color: var(--ink); }
+.letter-bar a:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.letter-bar span { color: var(--grout-dark); border: 2px dashed var(--grout); }
+.gloss-letter + .gloss-letter { margin-top: 36px; }
+.gloss-letter > h2 {
+  font-family: var(--display); font-weight: 400; color: var(--rosie); font-size: var(--step-4);
+  margin: 0 0 12px; scroll-margin-top: 96px;
+  border-bottom: 2px solid var(--grout); padding-bottom: 4px;
+}
+.gloss-list { margin: 0; display: grid; gap: 4px; }
+.gloss-term { padding: 12px 0 14px; border-bottom: 1px solid var(--grout); scroll-margin-top: 96px; }
+.gloss-term:last-child { border-bottom: 0; }
+.gloss-term dt { font-weight: 850; font-size: 1.15rem; }
+.gloss-term dt .aka { font-weight: 500; color: var(--ink-soft); font-size: 0.92rem; }
+.gloss-term dd { margin: 4px 0 0; max-width: var(--measure); line-height: 1.65; }
+.gloss-term dd .see { display: block; margin-top: 4px; font-size: 0.93rem; color: var(--ink-soft); }
+.gloss-term:target { background: var(--sun-soft); border-radius: var(--radius-s); padding-left: 12px; padding-right: 12px; }

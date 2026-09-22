@@ -1,0 +1,90 @@
+---
+title: How many tubes of caulk do I need?
+description: A caulk calculator. Enter the joint length, bead size and profile, and get the number of 10.1 oz cartridges, squeeze tubes or sausages to buy.
+section: finder
+scripts: ["calculator.js"]
+---
+<header class="page-head tiled">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="{{root}}index.html">Home</a></li><li><a href="{{root}}caulk-finder/index.html">Caulk Finder</a></li><li>Tube calculator</li></ol></nav>
+    <h1>How many tubes?</h1>
+    {{> bead-line}}
+    <p class="lede" style="color:var(--ink)">Measure the joint, pick the bead size, and we'll do the geometry. Nobody wants to run out halfway down a tub, and nobody needs eleven tubes for a window.</p>
+  </div>
+</header>
+{{joint}}
+
+<section class="section" aria-label="Calculator">
+  <div class="wrap calc-grid">
+    <form id="calc" class="calc-form" onsubmit="return false">
+      <fieldset class="chip-group">
+        <legend class="calc-legend">Units</legend>
+        <label class="chip"><input type="radio" name="units" value="us" checked><span>Feet &amp; inches</span></label>
+        <label class="chip"><input type="radio" name="units" value="metric"><span>Metric</span></label>
+      </fieldset>
+
+      <div class="field">
+        <label for="run">Total length of joint, in <span id="len-unit">feet</span></label>
+        <input class="input" id="run" name="run" type="number" inputmode="decimal" min="0" step="0.5" placeholder="e.g. 14">
+        <div class="presets" aria-label="Common jobs">
+          <span class="small">Or start from a common job:</span>
+          <button type="button" class="btn-plain" data-preset-ft="10" data-preset-profile="fillet">Bathtub, 3 walls</button>
+          <button type="button" class="btn-plain" data-preset-ft="9" data-preset-profile="fillet">Kitchen sink rim</button>
+          <button type="button" class="btn-plain" data-preset-ft="14" data-preset-profile="fillet">Window, 3×4 ft</button>
+          <button type="button" class="btn-plain" data-preset-ft="17" data-preset-profile="fillet">Exterior door</button>
+          <button type="button" class="btn-plain" data-preset-ft="45" data-preset-profile="fillet">Baseboards, 12×12 room</button>
+          <button type="button" class="btn-plain" data-preset-ft="16" data-preset-profile="backer">Garage slab joint</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="width">Bead size (the width of the gap)</label>
+        <select class="input" id="width" name="width"></select>
+      </div>
+
+      <fieldset class="chip-group">
+        <legend class="calc-legend">Joint profile</legend>
+        <label class="chip"><input type="radio" name="profile" value="fillet" checked><span>Corner fillet</span></label>
+        <label class="chip"><input type="radio" name="profile" value="square"><span>Square gap, full depth</span></label>
+        <label class="chip"><input type="radio" name="profile" value="backer"><span>Over backer rod</span></label>
+      </fieldset>
+
+      <div class="field">
+        <label for="container">Container</label>
+        <select class="input" id="container" name="container">
+          <option value="c10">Standard cartridge, 10.1 fl oz (about 300 mL)</option>
+          <option value="c28">Large cartridge, 28 fl oz</option>
+          <option value="s20">Sausage pack, 20 fl oz</option>
+          <option value="t28">Squeeze tube, 2.8 fl oz</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="waste">Waste allowance: <span id="waste-val">10%</span></label>
+        <input id="waste" name="waste" type="range" min="0" max="30" step="5" value="10" class="range">
+      </div>
+    </form>
+
+    <aside class="calc-result" aria-label="Result">
+      <div id="calc-out" aria-live="polite">
+        <noscript><p>The calculator needs JavaScript. Rule of thumb: a 10.1 oz cartridge fills roughly 25 feet of a 1/4 inch square joint, or about twice that as a 1/4 inch corner fillet.</p></noscript>
+      </div>
+    </aside>
+  </div>
+</section>
+
+{{ad}}
+
+<section class="section-tight" aria-labelledby="math" style="padding-bottom:72px">
+  <div class="wrap wrap-narrow prose">
+    <h2 id="math">How the math works</h2>
+    <p>A bead is a long, thin solid, so its volume is its cross-section times its length. The profile decides the cross-section:</p>
+    <ul>
+      <li><strong>Corner fillet:</strong> the triangular bead you run where a tub meets tile or a baseboard meets a wall. Area is half the bead size squared.</li>
+      <li><strong>Square gap, full depth:</strong> a slot filled all the way down, as deep as it is wide. It uses more caulk than you'd think, and deep joints like this are exactly where <a href="{{root}}the-bead/backer-rod/index.html">backer rod</a> saves you tubes.</li>
+      <li><strong>Over backer rod:</strong> the pro method for wide joints. Sealant depth equals the width up to 1/2 inch, then half the width, and never less than 1/4 inch. Check the tube; some sealants specify their own depth rules.</li>
+    </ul>
+    <p>A standard 10.1 fl oz cartridge holds about 18 cubic inches of sealant. You won't get every drop out, and some goes on your fingers, which is what the waste allowance covers.</p>
+    <p>Not sure what to buy? The <a href="{{root}}caulk-finder/index.html">Caulk Finder</a> will name the formulation and a tube.</p>
+  </div>
+</section>

@@ -1,0 +1,136 @@
+---
+title: The Caulk Crossword
+description: Two free interactive caulk crosswords, Apprentice and Master, with check, reveal, a timer and saved progress. Silicone, backer rod, butyl, oakum and more.
+section: play
+styles: ["play.css"]
+scripts: ["crossword-data.js", "crossword.js"]
+---
+<header class="page-head page-head-compact tiled">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="{{root}}index.html">Home</a></li><li><a href="{{root}}play/index.html">Play</a></li><li>Crossword</li></ol></nav>
+    <div class="play-head">
+      <div>
+        <h1>The caulk crossword</h1>
+        {{> bead-line}}
+        <p class="lede">Two puzzles, one obsession. Fill every square and you'll know more words for "sealant" than most hardware store clerks.</p>
+      </div>
+      <p class="play-host"><img src="{{root}}assets/img/crew-rosie-detective.webp" width="54" height="54" alt=""><span><strong>Rosie is on the case.</strong>She wrote the clues. She's very proud of the puns.</span></p>
+    </div>
+  </div>
+</header>
+{{joint}}
+
+<section class="section section-tight" aria-labelledby="cw-heading">
+  <div class="wrap">
+    <h2 id="cw-heading" class="visually-hidden">Puzzle</h2>
+    <div class="cw" data-crossword>
+      <div class="cw-top js-only">
+        <div class="cw-switch" role="group" aria-label="Choose a puzzle">
+          <button type="button" class="btn-plain" data-puzzle="apprentice" aria-pressed="true">Apprentice <small>16 clues</small></button>
+          <button type="button" class="btn-plain" data-puzzle="master" aria-pressed="false">Master <small>26 clues</small></button>
+        </div>
+        <p class="cw-blurb"></p>
+      </div>
+
+      <div class="cw-layout js-only">
+        <div class="cw-main">
+          <div class="cw-toolbar">
+            <p class="cw-timer" aria-label="Elapsed time"><span class="cw-timer-value">0:00</span></p>
+            <div class="cw-tools" role="group" aria-label="Check answers">
+              <span class="cw-tools-label" aria-hidden="true">Check</span>
+              <button type="button" class="btn-mini" data-action="check-letter" aria-label="Check letter">Letter</button>
+              <button type="button" class="btn-mini" data-action="check-word" aria-label="Check word">Word</button>
+              <button type="button" class="btn-mini" data-action="check-puzzle" aria-label="Check puzzle">Puzzle</button>
+            </div>
+            <div class="cw-tools" role="group" aria-label="Reveal answers">
+              <span class="cw-tools-label" aria-hidden="true">Reveal</span>
+              <button type="button" class="btn-mini" data-action="reveal-word" aria-label="Reveal word">Word</button>
+              <button type="button" class="btn-mini" data-action="reveal-puzzle" aria-label="Reveal puzzle">Puzzle</button>
+            </div>
+            <button type="button" class="btn-mini" data-action="clear">Clear</button>
+          </div>
+
+          <div class="cw-cluebar" aria-live="polite"><span class="cw-cluebar-num"></span><span class="visually-hidden">: </span><span class="cw-cluebar-text"></span></div>
+          <div class="cw-board">
+            <div class="cw-grid-wrap">
+              <div class="cw-grid" role="grid" aria-label="Crossword grid. Type to fill; arrow keys move; Space switches direction; Tab jumps to the next clue; Escape leaves the grid."></div>
+              <input class="cw-input" type="text" aria-label="Crossword letter entry" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" enterkeyhint="next" inputmode="text">
+            </div>
+          </div>
+          <p class="cw-status" role="status" aria-live="polite"></p>
+
+          <div class="cw-done" hidden>
+            {{> seal}}
+            <div>
+              <h2>Sealed tight!</h2>
+              <p class="cw-done-text"></p>
+              <p class="btn-row"><button type="button" class="btn-mini" data-switch="master">Try the Master puzzle</button> <a class="btn-mini" href="{{root}}play/caulk-iq/index.html">Take the Caulk IQ quiz</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cw-clues">
+          <section aria-labelledby="across-h">
+            <h2 id="across-h">Across</h2>
+            <div class="cw-clue-scroll"><ol data-list="across"></ol></div>
+          </section>
+          <section aria-labelledby="down-h">
+            <h2 id="down-h">Down</h2>
+            <div class="cw-clue-scroll"><ol data-list="down"></ol></div>
+          </section>
+        </div>
+      </div>
+
+      <noscript>
+        <div class="warn cw-noscript"><strong>The crossword needs JavaScript.</strong><p>Turn JavaScript on to play in your browser. Your progress saves on this device as you go.</p></div>
+      </noscript>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight howto-section" aria-labelledby="howto-h">
+  <div class="wrap split">
+    <div>
+      <h2 id="howto-h">How to play</h2>
+      <p>Click or tap a square and start typing. The yellow square is where your next letter goes; the seafoam squares are the rest of the word. Your progress saves on this device, so you can walk away mid-bead and come back later.</p>
+      <p class="no-print"><button type="button" class="btn-mini" onclick="window.print()">Print a blank copy</button> Prefer pen and paper? The printout skips the buttons and your answers.</p>
+    </div>
+    <dl class="howto-keys">
+      <dt>Letters</dt><dd>Fill the square and move to the next one</dd>
+      <dt>Arrow keys</dt><dd>Move around the grid (the first press turns you to face that way)</dd>
+      <dt>Space, or tap the square again</dt><dd>Switch between Across and Down</dd>
+      <dt>Tab / Shift+Tab</dt><dd>Jump to the next or previous clue</dd>
+      <dt>Backspace</dt><dd>Erase and step back</dd>
+      <dt>Escape</dt><dd>Leave the grid and go to the buttons</dd>
+    </dl>
+  </div>
+</section>
+
+{{ad}}
+
+<section class="section" aria-labelledby="more-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="more-h">More ways to play</h2><p>Finished the grid? There's plenty more caulk where that came from.</p></div>
+    <div class="grid grid-3 game-cards">
+      <a class="card card-link" href="{{root}}play/bead-master/index.html">
+        <span class="tag tag-red">Game</span>
+        <h3>Bead Master</h3>
+        <p>Lay a smooth, steady bead along the seam without blobs or gaps. Harder than it looks. Just like real life.</p>
+        <span class="more">Play Bead Master</span>
+      </a>
+      <a class="card card-link" href="{{root}}play/which-caulk-are-you/index.html">
+        <span class="tag tag-sun">Quiz</span>
+        <h3>Which caulk are you?</h3>
+        <p>Nine questions to find your formulation. Are you flexible, paintable, or just very, very clingy?</p>
+        <span class="more">Find your caulk</span>
+      </a>
+      <a class="card card-link" href="{{root}}play/caulk-iq/index.html">
+        <span class="tag tag-denim">Trivia</span>
+        <h3>Caulk IQ</h3>
+        <p>Fifteen questions on technique, chemistry and a surprising amount of maritime history.</p>
+        <span class="more">Test your Caulk IQ</span>
+      </a>
+    </div>
+    <p style="margin-top:24px"><a href="{{root}}play/index.html">See everything in Play</a></p>
+  </div>
+</section>

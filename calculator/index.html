@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add('js')</script>
+  <title>How many tubes of caulk do I need? | I Love Caulk</title>
+  <meta name="description" content="A caulk calculator. Enter the joint length, bead size and profile, and get the number of 10.1 oz cartridges, squeeze tubes or sausages to buy.">
+  <meta name="theme-color" content="#1f3c88">
+  <meta property="og:site_name" content="I Love Caulk">
+  <meta property="og:title" content="How many tubes of caulk do I need?">
+  <meta property="og:description" content="A caulk calculator. Enter the joint length, bead size and profile, and get the number of 10.1 oz cartridges, squeeze tubes or sausages to buy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bigjosh.github.io/ilovecaulk.com/calculator/">
+  <meta property="og:image" content="https://bigjosh.github.io/ilovecaulk.com/assets/img/og-crew.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../assets/img/favicon-64.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/shrikhand-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/librefranklin-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1304934482357714" crossorigin="anonymous"></script>
+  <script src="../assets/js/site.js" defer></script>
+  <script src="../assets/js/calculator.js" defer></script>
+</head>
+<body class="">
+  <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="bead-g" gradientUnits="userSpaceOnUse" x1="0" y1="4" x2="0" y2="22"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#f4f3ec"/><stop offset="1" stop-color="#c9c6ba"/></linearGradient></defs></svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="brand" href="../index.html">
+        <img src="../assets/img/logo-160.webp" width="56" height="56" alt="">
+        <span class="brand-name">I Love Caulk</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+        <li><a href="../caulk-finder/index.html" aria-current="page">Find a Caulk</a></li>
+        <li><a href="../caulk-by-room/index.html">Rooms</a></li>
+        <li><a href="../caulk-by-type/index.html">Types</a></li>
+        <li><a href="../reviews/index.html">Reviews</a></li>
+        <li><a href="../the-bead/index.html">The Bead</a></li>
+        <li><a href="../play/index.html">Play</a></li>
+        <li><a href="../faq/index.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+<header class="page-head tiled">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="../caulk-finder/index.html">Caulk Finder</a></li><li>Tube calculator</li></ol></nav>
+    <h1>How many tubes?</h1>
+    <svg class="bead-line is-squeezed" viewBox="0 0 420 22" aria-hidden="true" focusable="false"><path pathLength="100" class="b-shadow" d="M8 12 C 80 7, 160 15, 240 11 S 360 8, 412 11"/><path pathLength="100" class="b-bead" d="M8 12 C 80 7, 160 15, 240 11 S 360 8, 412 11"/><path pathLength="100" class="b-shine" d="M14 12 C 80 7, 160 15, 240 11 S 360 8, 404 11"/></svg>
+
+    <p class="lede" style="color:var(--ink)">Measure the joint, pick the bead size, and we'll do the geometry. Nobody wants to run out halfway down a tub, and nobody needs eleven tubes for a window.</p>
+  </div>
+</header>
+<div class="joint" aria-hidden="true"><svg viewBox="0 0 1200 28" preserveAspectRatio="none"><path class="joint-shadow" d="M0 16 C 200 13, 400 18, 600 15 S 1000 13, 1200 16" /><path class="joint-bead" d="M0 13 C 200 10, 400 15, 600 12 S 1000 10, 1200 13" /><path class="joint-shine" d="M0 10 C 200 7.5, 400 11.5, 600 9 S 1000 7.5, 1200 10" /></svg></div>
+
+<section class="section" aria-label="Calculator">
+  <div class="wrap calc-grid">
+    <form id="calc" class="calc-form" onsubmit="return false">
+      <fieldset class="chip-group">
+        <legend class="calc-legend">Units</legend>
+        <label class="chip"><input type="radio" name="units" value="us" checked><span>Feet &amp; inches</span></label>
+        <label class="chip"><input type="radio" name="units" value="metric"><span>Metric</span></label>
+      </fieldset>
+
+      <div class="field">
+        <label for="run">Total length of joint, in <span id="len-unit">feet</span></label>
+        <input class="input" id="run" name="run" type="number" inputmode="decimal" min="0" step="0.5" placeholder="e.g. 14">
+        <div class="presets" aria-label="Common jobs">
+          <span class="small">Or start from a common job:</span>
+          <button type="button" class="btn-plain" data-preset-ft="10" data-preset-profile="fillet">Bathtub, 3 walls</button>
+          <button type="button" class="btn-plain" data-preset-ft="9" data-preset-profile="fillet">Kitchen sink rim</button>
+          <button type="button" class="btn-plain" data-preset-ft="14" data-preset-profile="fillet">Window, 3×4 ft</button>
+          <button type="button" class="btn-plain" data-preset-ft="17" data-preset-profile="fillet">Exterior door</button>
+          <button type="button" class="btn-plain" data-preset-ft="45" data-preset-profile="fillet">Baseboards, 12×12 room</button>
+          <button type="button" class="btn-plain" data-preset-ft="16" data-preset-profile="backer">Garage slab joint</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="width">Bead size (the width of the gap)</label>
+        <select class="input" id="width" name="width"></select>
+      </div>
+
+      <fieldset class="chip-group">
+        <legend class="calc-legend">Joint profile</legend>
+        <label class="chip"><input type="radio" name="profile" value="fillet" checked><span>Corner fillet</span></label>
+        <label class="chip"><input type="radio" name="profile" value="square"><span>Square gap, full depth</span></label>
+        <label class="chip"><input type="radio" name="profile" value="backer"><span>Over backer rod</span></label>
+      </fieldset>
+
+      <div class="field">
+        <label for="container">Container</label>
+        <select class="input" id="container" name="container">
+          <option value="c10">Standard cartridge, 10.1 fl oz (about 300 mL)</option>
+          <option value="c28">Large cartridge, 28 fl oz</option>
+          <option value="s20">Sausage pack, 20 fl oz</option>
+          <option value="t28">Squeeze tube, 2.8 fl oz</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="waste">Waste allowance: <span id="waste-val">10%</span></label>
+        <input id="waste" name="waste" type="range" min="0" max="30" step="5" value="10" class="range">
+      </div>
+    </form>
+
+    <aside class="calc-result" aria-label="Result">
+      <div id="calc-out" aria-live="polite">
+        <noscript><p>The calculator needs JavaScript. Rule of thumb: a 10.1 oz cartridge fills roughly 25 feet of a 1/4 inch square joint, or about twice that as a 1/4 inch corner fillet.</p></noscript>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<aside class="ad-well" aria-label="Advertisement">
+  <p class="ad-label">Advertisement</p>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1304934482357714" data-ad-slot="9550528388" data-ad-format="auto"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</aside>
+
+<section class="section-tight" aria-labelledby="math" style="padding-bottom:72px">
+  <div class="wrap wrap-narrow prose">
+    <h2 id="math">How the math works</h2>
+    <p>A bead is a long, thin solid, so its volume is its cross-section times its length. The profile decides the cross-section:</p>
+    <ul>
+      <li><strong>Corner fillet:</strong> the triangular bead you run where a tub meets tile or a baseboard meets a wall. Area is half the bead size squared.</li>
+      <li><strong>Square gap, full depth:</strong> a slot filled all the way down, as deep as it is wide. It uses more caulk than you'd think, and deep joints like this are exactly where <a href="../the-bead/backer-rod/index.html">backer rod</a> saves you tubes.</li>
+      <li><strong>Over backer rod:</strong> the pro method for wide joints. Sealant depth equals the width up to 1/2 inch, then half the width, and never less than 1/4 inch. Check the tube; some sealants specify their own depth rules.</li>
+    </ul>
+    <p>A standard 10.1 fl oz cartridge holds about 18 cubic inches of sealant. You won't get every drop out, and some goes on your fingers, which is what the waste allowance covers.</p>
+    <p>Not sure what to buy? The <a href="../caulk-finder/index.html">Caulk Finder</a> will name the formulation and a tube.</p>
+  </div>
+</section>
+  </main>
+<footer class="site-footer">
+  <div class="joint" aria-hidden="true"><svg viewBox="0 0 1200 28" preserveAspectRatio="none"><path class="joint-shadow" d="M0 16 C 200 13, 400 18, 600 15 S 1000 13, 1200 16" /><path class="joint-bead" d="M0 13 C 200 10, 400 15, 600 12 S 1000 10, 1200 13" /><path class="joint-shine" d="M0 10 C 200 7.5, 400 11.5, 600 9 S 1000 7.5, 1200 10" /></svg></div>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../assets/img/logo-320.webp" width="120" height="120" alt="I Love Caulk logo: Rosie with a caulk gun in front of a red heart">
+        <p class="footer-motto">A caulk for every crack.</p>
+        <p>The honest, plain-English guide to sealing things properly. No brand pays for our opinions, and we don't use affiliate links.</p>
+      </div>
+      <div>
+        <h2>Rooms</h2>
+        <ul>
+          <li><a href="../room-kitchen/index.html">Kitchen</a></li>
+          <li><a href="../room-bathroom/index.html">Bathroom</a></li>
+          <li><a href="../room-bedroom/index.html">Bedroom</a></li>
+          <li><a href="../room-windows-doors/index.html">Windows &amp; doors</a></li>
+          <li><a href="../room-basement-foundation/index.html">Basement &amp; foundation</a></li>
+          <li><a href="../room-garage/index.html">Garage</a></li>
+          <li><a href="../room-exterior-outdoors/index.html">Exterior &amp; outdoors</a></li>
+          <li><a href="../room-roof-gutters/index.html">Roof &amp; gutters</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Learn</h2>
+        <ul>
+          <li><a href="../caulk-finder/index.html">Caulk Finder</a></li>
+          <li><a href="../caulk-by-type/index.html">Caulk by type</a></li>
+          <li><a href="../types-formulations/index.html">Formulations guide</a></li>
+          <li><a href="../reviews/index.html">Reviews</a></li>
+          <li><a href="../calculator/index.html">Tube calculator</a></li>
+          <li><a href="../glossary/index.html">Glossary</a></li>
+          <li><a href="../faq/index.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>The Bead</h2>
+        <ul>
+          <li><a href="../the-bead/how-to-caulk/index.html">How to lay a perfect bead</a></li>
+          <li><a href="../the-bead/remove-old-caulk/index.html">Removing old caulk</a></li>
+          <li><a href="../the-bead/caulk-vs-sealant/index.html">Caulk vs. sealant vs. grout</a></li>
+          <li><a href="../the-bead/history-of-caulk/index.html">A sticky history</a></li>
+          <li><a href="../the-bead/dear-rosie/index.html">Dear Rosie</a></li>
+          <li><a href="../the-bead/index.html">All stories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Play</h2>
+        <ul>
+          <li><a href="../play/bead-master/index.html">Bead Master game</a></li>
+          <li><a href="../play/crossword/index.html">Caulk crossword</a></li>
+          <li><a href="../play/which-caulk-are-you/index.html">Which caulk are you?</a></li>
+          <li><a href="../play/caulk-iq/index.html">Caulk IQ quiz</a></li>
+        </ul>
+        <h2 style="margin-top:22px">Us</h2>
+        <ul>
+          <li><a href="../about/index.html">About &amp; the Crew</a></li>
+          <li><a href="../privacy/index.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> I Love Caulk. We're serious about caulk.</span>
+      <span>Always read the tube. Formulas change, and the label wins.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
