@@ -2,7 +2,7 @@
 Generates the eight room guides (src/pages/room-*/index.html) and the rooms hub
 (src/pages/caulk-by-room/index.html) from the data below.
 
-Run:  python src/tools/rooms.py && python src/build.py
+Run:  python3 src/tools/rooms.py && python3 src/build.py
 """
 from html import escape
 from pathlib import Path

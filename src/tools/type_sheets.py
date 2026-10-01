@@ -1,7 +1,7 @@
 """
 Generates src/pages/caulk-by-type/index.html: one spec sheet per formulation.
 
-Run:  python src/tools/type_sheets.py && python src/build.py
+Run:  python3 src/tools/type_sheets.py && python3 src/build.py
 """
 from html import escape
 from pathlib import Path

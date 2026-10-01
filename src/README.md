@@ -5,7 +5,7 @@ repo root (which is the web root) by a small Python script. The script only runs
 your machine; GitHub Pages just serves the built files.
 
 ```
-python src/build.py        # builds every page, writes sitemap.xml, checks every local link
+python3 src/build.py        # builds every page, writes sitemap.xml, checks every local link
 ```
 
 The build fails loudly on: broken local links, links to missing `#anchors`, directory

@@ -18,11 +18,14 @@ from GitHub Pages, and from a custom domain.
 - `src/build.py`: wraps each page in the shared template, writes it to the repo root, builds `sitemap.xml`, and checks every local link and anchor
 - `assets/`: CSS, JS, self-hosted fonts (Shrikhand and Libre Franklin, SIL OFL), and images
 
+The scripts need Python 3 (they won't run under Python 2, which is what `python` still
+points to on some machines).
+
 ```sh
-python src/tools/rooms.py        # only if you edited the room data
-python src/tools/type_sheets.py  # only if you edited the type data
-python src/build.py              # always
-python -m http.server 8000       # preview at http://localhost:8000/
+python3 src/tools/rooms.py        # only if you edited the room data
+python3 src/tools/type_sheets.py  # only if you edited the type data
+python3 src/build.py              # always
+python3 -m http.server 8000       # preview at http://localhost:8000/
 ```
 
 See [`src/README.md`](src/README.md) for page conventions, voice, the Crew, and shared anchors.
