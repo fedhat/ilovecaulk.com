@@ -11,7 +11,7 @@ Tokens available in page content and partials:
   {{> name}}        contents of src/partials/name.html
   {{joint}}         the caulk-bead section divider
 
-Run:  python src/build.py
+Run:  python3 src/build.py
 """
 import html as htmllib
 import json

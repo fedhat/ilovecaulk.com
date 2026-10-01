@@ -18,11 +18,14 @@ from GitHub Pages, and from a custom domain.
 - `src/build.py`: wraps each page in the shared template, writes it to the repo root, builds `sitemap.xml`, and checks every local link and anchor
 - `assets/`: CSS, JS, self-hosted fonts (Shrikhand and Libre Franklin, SIL OFL), and images
 
+The scripts need Python 3 (they won't run under Python 2, which is what `python` still
+points to on some machines).
+
 ```sh
-python src/tools/rooms.py        # only if you edited the room data
-python src/tools/type_sheets.py  # only if you edited the type data
-python src/build.py              # always
-python -m http.server 8000       # preview at http://localhost:8000/
+python3 src/tools/rooms.py        # only if you edited the room data
+python3 src/tools/type_sheets.py  # only if you edited the type data
+python3 src/build.py              # always
+python3 -m http.server 8000       # preview at http://localhost:8000/
 ```
 
 See [`src/README.md`](src/README.md) for page conventions, voice, the Crew, and shared anchors.
@@ -33,3 +36,10 @@ Every page loads the AdSense script (`ca-pub-1304934482357714`) and places one r
 unit (slot `9550528388`). `ads.txt` is at the site root. AdSense only fills ads on domains
 approved in the AdSense account, so ads appear once the site is served from `ilovecaulk.com`
 (or the github.io domain is added to the account).
+
+## Amazon affiliate links
+
+Product links to Amazon use `amzn.to` short links tagged `forcefed-20`, carried over from the
+original site's Airtable. They appear in each room page's shopping list, on the reviews page
+("Check price on Amazon"), and in the Caulk Finder verdict. Every page's footer carries the
+Amazon Associates disclosure, and the privacy page explains the program.

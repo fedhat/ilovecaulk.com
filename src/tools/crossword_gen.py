@@ -12,7 +12,7 @@ Validation guarantees:
   * numbering matches the standard rule (a cell is numbered if it starts an
     across or down entry, scanning rows top-to-bottom, left-to-right)
 
-Run:  python src/tools/crossword_gen.py
+Run:  python3 src/tools/crossword_gen.py
 """
 import json
 import random
