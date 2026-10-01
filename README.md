@@ -33,3 +33,10 @@ Every page loads the AdSense script (`ca-pub-1304934482357714`) and places one r
 unit (slot `9550528388`). `ads.txt` is at the site root. AdSense only fills ads on domains
 approved in the AdSense account, so ads appear once the site is served from `ilovecaulk.com`
 (or the github.io domain is added to the account).
+
+## Amazon affiliate links
+
+Product links to Amazon use `amzn.to` short links tagged `forcefed-20`, carried over from the
+original site's Airtable. They appear in each room page's shopping list, on the reviews page
+("Check price on Amazon"), and in the Caulk Finder verdict. Every page's footer carries the
+Amazon Associates disclosure, and the privacy page explains the program.

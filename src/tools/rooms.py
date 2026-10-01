@@ -42,6 +42,95 @@ PRODUCTS = {
     "3m-fire-barrier": "3M Fire Barrier CP 25WB+",
 }
 
+# Amazon affiliate links (tag forcefed-20) for reviewed products. Keep in sync with
+# assets/js/finder.js and the buy buttons on src/pages/reviews/index.html.
+AMAZON = {
+    "dap-alex-plus": "https://amzn.to/4x50QPS",
+    "dap-dynaflex-ultra": "https://amzn.to/4vpsWUq",
+    "ge-silicone-2": "https://amzn.to/4o2bNgP",
+    "gorilla-silicone": "https://amzn.to/4nYryFJ",
+    "polyblend-sanded": "https://amzn.to/4dTzgfo",
+    "osi-quad-max": "https://amzn.to/3RvK9Nj",
+    "sikaflex-1a": "https://amzn.to/4vcRAr8",
+    "geocel-2300": "https://amzn.to/432uVll",
+    "quikrete-hydraulic": "https://amzn.to/4uJzpcT",
+}
+
+# Each room's shopping list, carried over from the original site's Airtable room views.
+# (product, type id, type label or None, best for, why, price tier, link, review id or None)
+# amzn.to links are Amazon affiliate links; anything else is the maker's product page.
+SHOP = {
+    "room-kitchen": [
+        ("DAP Alex Plus Acrylic Latex + Silicone", "siliconized-acrylic", None, "Counter edges and trim", "Paintable, flexible", "$", "https://amzn.to/4x50QPS", "dap-alex-plus"),
+        ("DAP Kwik Seal Plus", "siliconized-acrylic", None, "Sink perimeter", "Mold-resistant, stays white", "$", "https://amzn.to/4dPEJnz", None),
+        ("GE Supreme Silicone Kitchen & Bath", "silicone", None, "Sink-to-countertop seam", "Waterproof, 10-year guarantee", "$–$$", "https://amzn.to/4uKXjEK", None),
+        ("GE Advanced Silicone 2 Kitchen & Bath", "silicone", None, "Backsplash edges", "Low odor, built-in mold inhibitor", "$–$$", "https://amzn.to/4o2bNgP", "ge-silicone-2"),
+        ("Gorilla White Silicone Sealant", "silicone", None, "Glass tile backsplash", "Waterproof, won't yellow", "$–$$", "https://amzn.to/4nYryFJ", "gorilla-silicone"),
+        ("Loctite Clear Silicone Waterproof Sealant", "silicone", None, "Glass and stainless transitions", "Crystal clear, fast cure", "$–$$", "https://amzn.to/4dCsCeQ", None),
+        ("Red Devil Kitchen & Bath Siliconized Latex", "siliconized-acrylic", None, "Painted cabinetry gaps", "Sandable, paintable", "$", "https://amzn.to/3RAtx73", None),
+    ],
+    "room-bathroom": [
+        ("DAP Kwik Seal Ultra Premium", "siliconized-acrylic", None, "Tub and shower tile seams", "Blends with grout lines, lifetime mold warranty", "$", "https://amzn.to/4edpia5", None),
+        ("DAP Silicone Plus Tub & Tile", "silicone", None, "Tub surround, shower pan", "Waterproof, stays flexible", "$", "https://amzn.to/3RAtAQh", None),
+        ("GE Silicone 1 Mold & Mildew Resistant", "silicone", None, "Wet-zone perimeters", "Microban antimicrobial protection", "$–$$", "https://amzn.to/4edptSN", None),
+        ("GE Advanced Silicone 2 Bath", "silicone", None, "Showerhead surround", "Resists staining, no bleach needed", "$–$$", "https://amzn.to/3Qd52wf", "ge-silicone-2"),
+        ("Polyblend Plus Sanded Caulk", "siliconized-acrylic", "Sanded acrylic", "Tile-to-tile joints", "Matched to grout colors, 50+ shades", "$$", "https://amzn.to/4dTzgfo", "polyblend-sanded"),
+        ("TEC AccuColor Sanded Caulk", "siliconized-acrylic", "Sanded acrylic", "Floor-to-wall transitions", "Wide color range", "$$", "https://amzn.to/435hLUM", None),
+        ("Mapei Keracaulk Sanded Caulk", "siliconized-acrylic", "Sanded acrylic", "Large-format tile seams", "Consistent color, low shrink", "$$", "https://amzn.to/4uIH3UQ", None),
+        ("Permatex Clear RTV Silicone Sealant", "silicone", None, "Around hot-water pipes", "High-temp, multipurpose", "$$", "https://amzn.to/49yl0aL", None),
+    ],
+    "room-bedroom": [
+        ("DAP Alex Plus Acrylic Latex", "siliconized-acrylic", None, "Baseboard and trim gaps", "Paintable in about 30 minutes, flexible", "$", "https://amzn.to/3RwdVS2", "dap-alex-plus"),
+        ("DAP Dynaflex 230", "elastomeric", None, "Crown molding and corners", "Very flexible, resists cracking", "$–$$", "https://amzn.to/4o0bjYt", None),
+        ("DAP Alex Flex Acrylic Latex", "acrylic-latex", None, "Drywall cracks and seams", "Bridges larger gaps", "$", "https://amzn.to/4o1LJCA", None),
+        ("OSI SC-175 Acoustical Sound Sealant", "acoustic", None, "Sound-rated walls, outlet boxes, pipe penetrations", "Non-hardening, low VOC, GREENGUARD certified", "$$", "https://www.ositough.com/products/central-pdp.html/osi-sc175/SAP_0201XAO06WSD.html", "osi-sc-175"),
+        ("Tremco Acoustical Sealant", "acoustic", None, "Sound-rated wall assemblies", "Pro grade, UL listed, stays flexible", "$$$", "https://www.tremcosealants.com/products/acoustical-curtainwall-sealant", None),
+    ],
+    "room-windows-doors": [
+        ("DAP Dynaflex 230", "elastomeric", None, "Window and door trim", "Very flexible, resists cracking", "$–$$", "https://amzn.to/4o0bjYt", None),
+        ("GE Supreme Silicone Window & Door", "silicone", None, "Exterior window frames", "UV-resistant, bonds to vinyl", "$–$$", "https://amzn.to/4ef7b3D", None),
+        ("Loctite PL Window, Door & Siding Sealant", "polyurethane", None, "Exterior masonry gaps", "Paintable, bonds to brick and stucco", "$–$$", "https://amzn.to/4ajiLbw", None),
+        ("DAPtex Plus Foam Sealant", "specialty", "Expanding foam", "Rough openings and headers", "Fills large gaps around frames", "$", "https://amzn.to/4e2UMPg", None),
+        ("Great Stuff Window & Door Insulating Foam", "specialty", "Expanding foam", "Around window flanges", "Minimal expansion, won't bow frames", "$", "https://amzn.to/4x7IHkv", None),
+        ("Tremco Spectrem 1 Silicone", "silicone", None, "Storefront glazing", "Commercial grade, long service life", "$$$", "https://www.tremcosealants.com/products/spectrem-1", None),
+        ("GE Advanced Silicone 2 Window & Door", "silicone", None, "Metal flashing and trim", "UV-resistant, 40-year durability claim", "$–$$", "https://amzn.to/4fXJwG6", None),
+        ("OSI Quad Max Window, Door & Siding", "specialty", "Exterior sealant", "Lap siding and J-channel", "Strong adhesion, paintable", "$$", "https://amzn.to/3RvK9Nj", "osi-quad-max"),
+        ("DAP Extreme Stretch", "elastomeric", None, "Windows, doors, siding, trim", "Very high stretch, gaps up to 3\", ASTM C920 Class 25", "$", "https://amzn.to/4dWaUly", None),
+    ],
+    "room-basement-foundation": [
+        ("Quikrete Hydraulic Water-Stop Cement", "hydraulic", None, "Actively leaking cracks", "Sets in minutes, even with water running", "$", "https://amzn.to/4uJzpcT", "quikrete-hydraulic"),
+        ("Quikrete Polyurethane Concrete Crack Sealant", "polyurethane", None, "Cracks in concrete, masonry, stucco", "Self-leveling, flexible", "$", "https://amzn.to/4ua8Xbg", None),
+        ("DAP Concrete & Mortar Waterproof Filler", "acrylic-latex", None, "Minor wall cracks and gaps", "Paintable, waterproof", "$", "https://amzn.to/4edFsQN", None),
+        ("Sikaflex Crack Fix", "polyurethane", None, "Foundation crack repair", "Can be injected into the crack", "$$–$$$", "https://amzn.to/4fnMhR7", None),
+        ("RadonSeal DIY Foundation Crack Repair Kit", "polyurethane", None, "Poured concrete walls", "Blocks water and radon", "$$", "https://amzn.to/4u8qErx", None),
+        ("GE Advanced Silicone 2 Concrete", "silicone", None, "Concrete, mortar and stone", "30-minute rain-ready, permanently flexible", "$–$$", "https://amzn.to/4u96VrN", None),
+        ("Drylok Masonry Crack Filler", "acrylic-latex", None, "Cracks in masonry walls and floors", "Fast-setting, paintable in about an hour", "$–$$", "https://amzn.to/49tay4n", None),
+    ],
+    "room-garage": [
+        ("DAP AMP Self-Leveling Concrete Sealant", "ms-polymer", None, "Floor cracks and expansion joints", "Self-leveling, goes on damp surfaces, ASTM C920", "$", "https://amzn.to/4voHBiA", None),
+        ("Sikaflex-1a", "polyurethane", None, "Floor and control joints", "Paintable, fuel-resistant", "$$–$$$", "https://amzn.to/4vcRAr8", "sikaflex-1a"),
+        ("Tremco Dymonic 100", "polyurethane", None, "High-movement joints", "Pro grade, non-sag; sold through distributors", "$$$", "https://www.tremcosealants.com/blog/dymonic-100-all-purpose-sealant", None),
+        ("DAP Alex Plus Clear", "siliconized-acrylic", None, "Drywall seams and trim", "Paintable, multi-surface", "$", "https://amzn.to/4u6r9SY", None),
+    ],
+    "room-exterior-outdoors": [
+        ("DAP Dynaflex Ultra", "elastomeric", None, "Wood and fiber-cement siding", "Rated for 35% joint movement, paintable", "$", "https://amzn.to/4vpsWUq", "dap-dynaflex-ultra"),
+        ("GE Advanced Silicone 2 Window & Door", "silicone", None, "Metal flashing and trim", "UV-resistant, 40-year durability claim", "$–$$", "https://amzn.to/4fXJwG6", None),
+        ("NPC Solar Seal No. 900", "polyurethane", None, "Residential and commercial joints", "High movement, sticks to many surfaces", "$$", "https://amzn.to/3RAN5YZ", None),
+        ("OSI Quad Max Window, Door & Siding", "specialty", "Exterior sealant", "Lap siding and J-channel", "Strong adhesion, paintable", "$$", "https://amzn.to/3RvK9Nj", "osi-quad-max"),
+        ("Sikaflex-15LM", "polyurethane", None, "Expansion joints, curtain wall", "Low modulus for wide, moving joints", "$$–$$$", "https://amzn.to/4u4RKje", None),
+        ("DAP Butyl-Flex", "butyl", None, "Gutters, flashing, shingle seams", "Works wet or cold, sticks to asphalt", "$", "https://www.dap.com/products-projects/products/butyl-flex-gutter-flashing-sealant/", "dap-butyl-flex"),
+        ("Geocel 2300 Crystal Clear", "specialty", "Tripolymer", "Glass, trim, decorative work", "Crystal clear, paintable", "$$", "https://amzn.to/432uVll", "geocel-2300"),
+        ("Sashco Log Builder", "acrylic-latex", None, "Log home chinking", "Flexible, weathertight", "$$–$$$", "https://amzn.to/4xiPp7p", None),
+    ],
+    "room-roof-gutters": [
+        ("DAP Butyl-Flex", "butyl", None, "Gutters, flashing, shingle seams", "Works wet or cold, sticks to asphalt", "$", "https://www.dap.com/products-projects/products/butyl-flex-gutter-flashing-sealant/", "dap-butyl-flex"),
+        ("GE Gutter Silicone 2", "silicone", None, "Metal and vinyl gutters", "30-minute rain-ready, wet or dry application", "$–$$", "https://gesealants.com/products/gutter-caulking/", None),
+        ("Henry 289 White Roof Sealant", "elastomeric", None, "Flat and low-slope roofs, vents", "Trowel or gun, UV-stable", "$–$$", "https://www.henry.com/residential/products/residential-roof-coatings/roof-repair--sealants/289-white-roof-sealant/#product-details-section", None),
+        ("Tremco Dymonic FC", "polyurethane", None, "Fascia and soffit joints", "Sag-resistant, high movement", "$$$", "https://amzn.to/433eHsf", None),
+        ("GE Metal Silicone 2", "silicone", None, "Sheds, metal roofs, vents, RVs", "Won't discolor chrome, bronze or nickel", "$–$$", "https://amzn.to/4xg2qP0", None),
+    ],
+}
+
 CREW = {
     "rosie": ("Rosie", "head caulker"),
     "flavio": ("Flavio", "wet-zone specialist"),
@@ -369,12 +458,30 @@ def e(s):
     return escape(s, quote=True)
 
 
-def type_tag(t):
-    return f'<a class="type-tag t-{t}" href="{{{{root}}}}caulk-by-type/index.html#{t}">{e(TYPES[t])}</a>'
+def type_tag(t, label=None):
+    return f'<a class="type-tag t-{t}" href="{{{{root}}}}caulk-by-type/index.html#{t}">{e(label or TYPES[t])}</a>'
+
+
+def amazon_link(url, text="Amazon"):
+    return f'<a class="buy-link" href="{e(url)}" rel="sponsored nofollow noopener" target="_blank">{text}</a>'
 
 
 def pick_link(p):
-    return f'<a href="{{{{root}}}}reviews/index.html#{p}">{e(PRODUCTS[p])}</a>'
+    link = f'<a href="{{{{root}}}}reviews/index.html#{p}">{e(PRODUCTS[p])}</a>'
+    return link + (f' ({amazon_link(AMAZON[p])})' if p in AMAZON else "")
+
+
+def shop_rows(slug):
+    rows = []
+    for product, t, label, best, why, price, url, review in SHOP[slug]:
+        name = f'<a href="{{{{root}}}}reviews/index.html#{review}">{e(product)}</a>' if review else e(product)
+        if "amzn.to" in url:
+            buy = amazon_link(url, "Check price on Amazon")
+        else:
+            buy = f'<a class="buy-link" href="{e(url)}" rel="noopener" target="_blank">Maker\'s page</a>'
+        rows.append(f'          <tr><th scope="row">{name}</th><td>{type_tag(t, label)}</td><td>{e(best)}</td>'
+                    f'<td>{e(why)}</td><td class="shop-price">{e(price)}</td><td>{buy}</td></tr>')
+    return "\n".join(rows)
 
 
 def room_tile(room, mini=False):
@@ -451,6 +558,27 @@ section: rooms
     <div class="spot-list">
 {chr(10).join(spots)}
     </div>
+  </div>
+</section>
+
+<section class="section-tight" aria-labelledby="shop">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="shop">The {lname} shopping list</h2>
+      <p>Tubes worth a place in your cart for this room, and the joint each one suits. Price runs from $ (budget) to $$$ (pro grade).</p>
+    </div>
+    <div class="table-scroll">
+      <table class="spec-table shop-table">
+        <caption class="visually-hidden">{e(room["name"])} caulk shopping list</caption>
+        <thead>
+          <tr><th scope="col">Product</th><th scope="col">Type</th><th scope="col">Best for</th><th scope="col">Why</th><th scope="col">Price</th><th scope="col">Buy</th></tr>
+        </thead>
+        <tbody>
+{shop_rows(room["slug"])}
+        </tbody>
+      </table>
+    </div>
+    <p class="affiliate-note">Amazon links are affiliate links: if you buy through one, we may earn a small commission at no extra cost to you. It never decides what we recommend.</p>
   </div>
 </section>
 

@@ -50,6 +50,8 @@
 .review-consensus ul { margin: 0; padding-left: 1.1em; }
 .review-consensus li { margin: 3px 0; font-size: 0.97rem; }
 .review-links { margin: 0; font-size: 0.95rem; color: var(--ink-soft); }
+.review-buy { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.review-buy .affiliate-note { margin: 0; }
 .compare-table td, .compare-table th { white-space: normal; }
 .compare-table tbody th a { color: var(--ink); }
 .after-compare { margin-top: clamp(28px, 4vw, 44px); }

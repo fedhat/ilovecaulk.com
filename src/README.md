@@ -38,6 +38,15 @@ enabled in the account) and exactly one responsive display unit, placed with `{{
 publisher `ca-pub-1304934482357714`, slot `9550528388`. Put the unit where it doesn't sit
 next to game controls or buttons. The 404 page has no unit. `ads.txt` lives at the root.
 
+## Amazon affiliate links
+
+Amazon links are `amzn.to` short links (tag `forcefed-20`). Mark them
+`rel="sponsored nofollow noopener" target="_blank"` and keep an "affiliate link" note nearby.
+The link for each reviewed product lives in three places that must agree: `AMAZON` in
+`src/tools/rooms.py`, `AMAZON` in `assets/js/finder.js`, and the buy buttons in
+`src/pages/reviews/index.html`. Room shopping lists are the `SHOP` data in `rooms.py`.
+Affiliate links never decide a pick or a score.
+
 ## Voice
 
 - We are very serious about caulk. Deadpan-earnest enthusiasm with a knowing wink.

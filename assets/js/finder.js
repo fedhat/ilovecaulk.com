@@ -37,6 +37,18 @@
     "quikrete-hydraulic": "Quikrete Hydraulic Water-Stop Cement",
     "3m-fire-barrier": "3M Fire Barrier CP 25WB+"
   };
+  // Amazon affiliate links; keep in sync with AMAZON in src/tools/rooms.py.
+  var AMAZON = {
+    "dap-alex-plus": "https://amzn.to/4x50QPS",
+    "dap-dynaflex-ultra": "https://amzn.to/4vpsWUq",
+    "ge-silicone-2": "https://amzn.to/4o2bNgP",
+    "gorilla-silicone": "https://amzn.to/4nYryFJ",
+    "polyblend-sanded": "https://amzn.to/4dTzgfo",
+    "osi-quad-max": "https://amzn.to/3RvK9Nj",
+    "sikaflex-1a": "https://amzn.to/4vcRAr8",
+    "geocel-2300": "https://amzn.to/432uVll",
+    "quikrete-hydraulic": "https://amzn.to/4uJzpcT"
+  };
   var ROOM_FOR = {
     tub: ["room-bathroom", "Bathroom guide"], counter: ["room-kitchen", "Kitchen guide"],
     trim: ["room-bedroom", "Bedroom & trim guide"], window: ["room-windows-doors", "Windows & doors guide"],
@@ -59,7 +71,9 @@
     return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; });
   }
   function pick(id) {
-    return '<a href="' + root + "reviews/index.html#" + id + '">' + esc(PRODUCTS[id]) + "</a>";
+    var html = '<a href="' + root + "reviews/index.html#" + id + '">' + esc(PRODUCTS[id]) + "</a>";
+    if (AMAZON[id]) html += ' <span class="verdict-amazon">(<a class="buy-link" href="' + AMAZON[id] + '" rel="sponsored nofollow noopener" target="_blank">Amazon</a>)</span>';
+    return html;
   }
 
   function decide(a) {
@@ -222,6 +236,7 @@
     html += '<p class="verdict-why">' + esc(r.why) + "</p>";
     html += '<div class="verdict-buy"><h3>Buy this</h3><p>' + r.picks.map(pick).join(" or ") + "</p>";
     if (r.alt.length) html += '<p class="small">Also good: ' + r.alt.map(pick).join(", ") + "</p>";
+    if (r.picks.concat(r.alt).some(function (id) { return AMAZON[id]; })) html += '<p class="affiliate-note">Amazon links are affiliate links. They never decide the verdict.</p>';
     html += "</div>";
     if (r.warn.length) html += '<div class="warn"><strong>Heads up</strong>' + r.warn.map(function (w) { return "<p>" + esc(w) + "</p>"; }).join("") + "</div>";
     if (r.tips.length) html += '<h3>Prep &amp; technique</h3><ul class="verdict-tips">' + r.tips.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>";
